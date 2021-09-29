@@ -25,10 +25,19 @@ if($strpos === false){
 }
 echo "<br>";
 
-$A = substr_count($nombre, "A");
-$a = substr_count($nombre, "a");
-echo "La cadena tiene " . $A . " a mayusculas y " . $a . " a minusculas"; 
+$a = substr_count($nombre, "A") + substr_count($nombre,"a");
+echo "La cadena tiene " . $a ." a"; 
 echo "<br>";
+
+$pos = stripos($nombre,'a');
+
+if($pos === false){
+    echo "No hay ninguna a";
+}else{
+    echo "La primera a esta en la posicion " . $pos;
+}
+echo "<br>";
+
 $replace = str_ireplace('o',0,$nombre);
 echo $replace;
 
