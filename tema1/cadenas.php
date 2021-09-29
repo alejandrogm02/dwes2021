@@ -40,8 +40,15 @@ echo "<br>";
 
 $replace = str_ireplace('o',0,$nombre);
 echo $replace;
-
-
+echo "<br>";
+$url = 'http://username:password@hostname:9090/path?arg=value';
+echo "Protocolo: " . parse_url($url, PHP_URL_SCHEME);
+echo "<br>";
+echo "Nombre de usuario: " . parse_url($url, PHP_URL_USER);
+echo "<br>";
+echo "Path: " . parse_url($url, PHP_URL_PATH);
+echo "<br>";
+echo "Querystring: " . parse_url($url, PHP_URL_QUERY);
 ?>
 </body>
 </html>
